@@ -145,7 +145,8 @@ describe('SqlDb - Provision - Execution', function () {
                     location: 'westus',
                     properties: {
                         administratorLogin: 'azureuser',
-                        administratorLoginPassword: 'c1oudc0w'
+                        administratorLoginPassword: 'c1oudc0w',
+                        transparentDataEncryption: 'Disabled'
                     }
                 },
                 sqldbName: 'fake-db-name',
@@ -180,6 +181,7 @@ describe('SqlDb - Provision - Execution', function () {
             sinon.stub(sqldbOps, 'createFirewallRule').yields(null, { statusCode: HttpStatus.OK });
             sinon.stub(sqldbOps, 'getDatabase').yields(null, { statusCode: HttpStatus.NOT_FOUND });
             sinon.stub(sqldbOps, 'createDatabase').yields(null, {body: {}});
+            sinon.stub(sqldbOps, 'setTransparentDataEncryption').yields(null, {statusCode: HttpStatus.OK});
         });
     
         after(function () {
@@ -191,6 +193,7 @@ describe('SqlDb - Provision - Execution', function () {
             sqldbOps.createFirewallRule.restore();
             sqldbOps.getDatabase.restore();
             sqldbOps.createDatabase.restore();
+            sqldbOps.setTransparentDataEncryption.restore();
         });
     
         it('should not callback error', function (done) {
@@ -218,6 +221,7 @@ describe('SqlDb - Provision - Execution', function () {
             sinon.stub(sqldbOps, 'createFirewallRule').yields(null, { statusCode: HttpStatus.OK });
             sinon.stub(sqldbOps, 'getDatabase').yields(null, { statusCode: HttpStatus.NOT_FOUND });
             sinon.stub(sqldbOps, 'createDatabase').yields(null, {body: {}});
+            sinon.stub(sqldbOps, 'setTransparentDataEncryption').yields(null, {statusCode: HttpStatus.OK});
         });
     
         after(function () {
