@@ -1,0 +1,92 @@
+{
+  "id": "733a73d8-d1a0-4163-8a67-99da6ab78d56",
+  "name": "azure-apimgmt",
+  "description": "Azure API Management",
+  "bindable": true,
+  "tags": [
+    "CloudFoundry",
+    "Azure",
+    "API Management"
+  ],
+  "metadata": {
+    "displayName": "Azure API Management",
+    "imageUrl": "https://cloudfoundry.blob.core.windows.net/assets/ServiceBus.png",
+    "longDescription": "Azure API Management helps organizations publish APIs to external, partner, and internal developers, providing cross-cutting features such as access control, rate limiting, monitoring, event logging, and response caching.",
+    "providerDisplayName": "Microsoft"
+  },
+  "plans": [
+    {
+      "id": "d4cd23f7-2964-4ab0-a274-70313a17de59",
+      "name": "Existing",
+      "free": true,
+      "description": "Deploys to an existing API service instance only; disallows creating a new one",
+      "displayName": "Existing"
+    },
+    {
+      "id": "68d6c7c6-a85a-4fc9-a701-822c9a4d53ea",
+      "name": "Developer",
+      "free": false,
+      "description": "The Developer tier is for API Management trial, development, and functional test. Customers should not use this tier for production.",
+      "metadata": {
+        "bullets": [
+          "Scale-Out : None",
+          "API Calls : 32 K per day",
+          "Data Transfer : 161 MB per day"
+        ],
+        "costs": [
+          {
+            "amount": {
+              "usd": 1.58
+            },
+            "unit": "Per Day"
+          }
+        ],
+        "displayName": "Developer"
+      }
+    },
+    {
+      "id": "c7faf668-26a3-4750-a2d3-e40706ab0657",
+      "name": "Standard",
+      "free": false,
+      "description": "The Standard tier offers increased performance, the ability to extend performance further by provisioning additional units, and an SLA.",
+      "metadata": {
+        "bullets": [
+          "Scale-Out : 4 units",
+          "API Calls : 7 M per day per unit",
+          "Data Transfer : 32 GB per day per unit"
+        ],
+        "costs": [
+          {
+            "amount": {
+              "usd": 22.55
+            },
+            "unit": "Per Day Per Unit"
+          }
+        ],
+        "displayName": "Standard"
+      }
+    },
+    {
+      "id": "dcad8ca1-5014-44da-a0d9-f377756addb7",
+      "name": "Premium",
+      "free": false,
+      "description": "The Premium tier offers the best performance and SLA, multi-region deployment, Azure Active Directory integration, and VPN.",
+      "metadata": {
+        "bullets": [
+          "Scale-Out : Unlimited",
+          "API Calls : 32 KM per day per unit",
+          "Data Transfer : 161 GB per day per unit"
+        ],
+        "costs": [
+          {
+            "amount": {
+              "usd": 91.90
+            },
+            "unit": "Per Day Per Unit"
+          }
+        ],
+        "displayName": "Premium"
+      }
+    }
+  ]
+}
