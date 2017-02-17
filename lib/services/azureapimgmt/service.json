@@ -3,6 +3,7 @@
   "name": "azure-apimgmt",
   "description": "Azure API Management",
   "bindable": true,
+  "requires": ["route_forwarding"],
   "tags": [
     "CloudFoundry",
     "Azure",

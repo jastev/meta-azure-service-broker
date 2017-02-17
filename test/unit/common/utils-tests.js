@@ -19,6 +19,8 @@ describe('Util', function() {
         'TENANT_ID',
         'CLIENT_ID',
         'CLIENT_SECRET',
+	'DEFAULT_LOCATION',
+	'DEFAULT_RESOURCE_GROUP',
         'SECURITY_USER_NAME',
         'SECURITY_USER_PASSWORD',
         'AZURE_BROKER_DATABASE_PROVIDER',
@@ -47,6 +49,8 @@ describe('Util', function() {
           'tenantId': environmentVariablesToSet['TENANT_ID'],
           'clientId': environmentVariablesToSet['CLIENT_ID'],
           'clientSecret': environmentVariablesToSet['CLIENT_SECRET'],
+          'defaultLocation': environmentVariablesToSet['DEFAULT_LOCATION'],
+          'defaultResourceGroup': environmentVariablesToSet['DEFAULT_RESOURCE_GROUP'],
         },
         'serviceBroker': {
           'credentials': {
